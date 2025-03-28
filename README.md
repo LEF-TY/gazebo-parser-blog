@@ -9,3 +9,5 @@ The Configuration Parser is a python program that uses an XML Element Tree libra
 The first milestone that the team was given was to familiarize ourselves with the formatting of SDF files and test out configurations on the Gazebo Simulator so that we are able to understand how the parsed files should function in the future. 
 
 The next milestone given to the team was to create the configuration parser. In order to complete this milestone, the team needed to first create a list of mappings from xml elements to FEAGI devices, and parse through the SDF file to find data relating to each element. After a mapping was created and the program was able to find the needed elements, the team was tasked with properly nesting the elements in the JSON configuration file to allow for better funcitonality within the FEAGI controller. 
+# Experience Along the Way
+*talking about our experience and challenges we used - maybe use 'mylist incident' section from midterm report as inspiration*
