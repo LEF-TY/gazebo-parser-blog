@@ -6,7 +6,11 @@ During this semester, our team has worked on enabling FEAGI's artificial general
 
 ## Using FEAGI With Gazebo
 
-Our team was focused on creating a parsing program that converts Gazebo SDF files into readable JSON output to be used by the FEAGI Configurator, which will then generate necessary data for the Gazebo Controller. Gazebo allows for the use of many different inputs/sensors and outputs/actuators in their simulations, and all simulation data is stored in SDF files. The formatting of the data in these SDF files are not uniform, as projects will have different goals and types of robots. In order for the FEAGI Configurator to understand any given simulation, it needs to be fed a standardized JSON format. We successfully created a parser that adapts to simulations of all kinds and produces a proper JSON configuration tree that the Configurator can use to produce a JSON listing capabilities for the Gazebo Controller.
+The following diagram demonstrates the desired functionality between Gazebo and FEAGI for successful robot control. This semester, our team focused on the sections in green to develop.
+
+![image](https://github.com/user-attachments/assets/c0d6de78-a5a5-40cd-9d3d-7e7846c37ad5)
+
+Our team was responsible for creating a parsing program that converts Gazebo SDF files into readable JSON output to be used by the FEAGI Configurator, which will then generate necessary data for the Gazebo Controller. Gazebo allows for the use of many different inputs/sensors and outputs/actuators in their simulations, and all simulation data is stored in SDF files. The formatting of the data in these SDF files are not uniform, as projects will have different goals and types of robots. In order for the FEAGI Configurator to understand any given simulation, it needs to be fed a standardized JSON format. We successfully created a parser that adapts to simulations of all kinds and produces a proper JSON configuration tree that the Configurator can use to produce a JSON listing capabilities for the Gazebo Controller.
 
 ## Development of the Parser
 
