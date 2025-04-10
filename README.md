@@ -38,13 +38,13 @@ The next milestone given to the team was to create the configuration parser. In 
 
 ![image](https://github.com/user-attachments/assets/c3c6893e-59ff-46e2-857c-0b3a2dccd343)
 
-The first step of the program is to convert the SDF file into an XML file. Due to compatibility issues, we ended up using the LXML package to do this. This step is done so that we can more easily analyze and parse the incoming file. Once we have the XML file, our programs begins the parsing process by scanning the entire XML file, finding and storing all elements included in the 'allow list' of the ```gazebo_config_template.json``` file.
+The first step of the program is to convert the SDF file into an XML Element Tree. Due to compatibility issues, we ended up using the LXML package to do this. This step is done so that we can more easily analyze and parse the incoming file. Once we have the XML ETree, our programs begins the parsing process by scanning the entire XML ETree, finding and storing all elements included in the 'allow list' of the ```gazebo_config_template.json``` file.
 
 From there, our program refers to the ```feagi_config_template.json``` file to find all properties of the found devices, and inputting them into a list of dictionaries. This occurs for all found elements until we have a list full of dictionaries, each index holding a device or link.
 
-The next step is nesting the elements according to their 'parent' and 'child' properties. This was the tricky part to figure out, and there were many functions created in order to try to solve this. In the end, we decided on a function that sscans through the XML document, checking for 'parents' and 'children' of the devices and links. Depending on which relationship was found, either the current element had another child added into the list inside the dictionary, or the current element was moved into their parent's list of children. This successfully nested all the devices and links, and now the list was ready for the final step.
+The next step is nesting the elements according to their 'parent' and 'child' properties. This was the tricky part to figure out, and there were many functions created in order to try to solve this. In the end, we decided on a function that scans through the XML tree, checking for 'parents' and 'children' of the devices and links. Depending on which relationship was found, either the current element had another child added into the list inside the dictionary, or the current element was moved into their parent's list of children. This successfully nested all the devices and links, and now the list was ready for the final step.
 
-Once everything is correctly nested, the list is dumped into JSON format into ```model_config_tree.json```, where it will be used by the FEAGI Configurator on Godot.
+Once everything is correctly nested, the list is dumped in JSON format into ```model_config_tree.json```, where it will be used by the FEAGI Configurator on Godot.
 
 ### Experience Along the Way
 
