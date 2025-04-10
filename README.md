@@ -50,6 +50,10 @@ Initally, different team members used different IDE platforms for the project. W
 
 Through our development, we had a slowly growing 'graveyard' of unused functions, new functions missing documentation, and variables with rather generic names (such as 'myList'). This was unacceptable, so we tackled these issues by removing the unused code to give the program a clean feeling. Additionally, we filled in proper documentation for all of the functions that are used and variables were renamed to better demonstrate their purpose and so that users who inspect the code can understand how the parser works.
 
-## Results
+### Results
+
+![]([my_video.mov](https://github.com/user-attachments/assets/84ca97de-28ea-42e7-8a13-81ceefdc3733))
+
+
 
 *say we completed task, attach video demonstration to show impact of work*
