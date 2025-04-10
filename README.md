@@ -34,7 +34,9 @@ Knowing this, we can set the goal to parse the SDF file to find all these essent
 
 ### Creating the Program
 
-The next milestone given to the team was to create the configuration parser. In order to complete this milestone, the team needed to first create a list of mappings from xml elements to FEAGI devices, and parse through the SDF file to find data relating to each element. After a mapping was created and the program was able to find the needed elements, the team was tasked with properly nesting the elements in the JSON configuration file to allow for better funcitonality within the FEAGI controller. 
+The next milestone given to the team was to create the configuration parser. In order to complete this milestone, the team needed to first create a list of mappings from xml elements to FEAGI devices, and parse through the SDF file to find data relating to each element. After a mapping was created and the program was able to find the needed elements, the team was tasked with properly nesting the elements in the JSON configuration file to allow for better funcitonality within the FEAGI controller. This process is demonstrated in the diagram below.
+
+![image](https://github.com/user-attachments/assets/c3c6893e-59ff-46e2-857c-0b3a2dccd343)
 
 *need to expand on this*
 
