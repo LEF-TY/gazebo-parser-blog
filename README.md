@@ -42,7 +42,7 @@ The first step of the program is to convert the SDF file into an XML file. Due t
 
 From there, our program refers to the ```feagi_config_template.json``` file to find all properties of the found devices, and inputting them into a list of dictionaries. This occurs for all found elements until we have a list full of dictionaries, each index holding a device or link.
 
-The next step is nesting the elements according to their 'parent' and 'child' properties. *expand on this*
+The next step is nesting the elements according to their 'parent' and 'child' properties. This was the tricky part to figure out, and there were many functions created in order to try to solve this. In the end, we decided on a function that sscans through the XML document, checking for 'parents' and 'children' of the devices and links. Depending on which relationship was found, either the current element had another child added into the list inside the dictionary, or the current element was moved into their parent's list of children. This successfully nested all the devices and links, and now the list was ready for the final step.
 
 Once everything is correctly nested, the list is dumped into JSON format into ```model_config_tree.json```, where it will be used by the FEAGI Configurator on Godot.
 
