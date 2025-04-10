@@ -38,7 +38,13 @@ The next milestone given to the team was to create the configuration parser. In 
 
 ![image](https://github.com/user-attachments/assets/c3c6893e-59ff-46e2-857c-0b3a2dccd343)
 
-*need to expand on this*
+The first step of the program is to convert the SDF file into an XML file. Due to compatibility issues, we ended up using the LXML package to do this. This step is done so that we can more easily analyze and parse the incoming file. Once we have the XML file, our programs begins the parsing process by scanning the entire XML file, finding and storing all elements included in the 'allow list' of the ```gazebo_config_template.json``` file.
+
+From there, our program refers to the ```feagi_config_template.json``` file to find all properties of the found devices, and inputting them into a list of dictionaries. This occurs for all found elements until we have a list full of dictionaries, each index holding a device or link.
+
+The next step is nesting the elements according to their 'parent' and 'child' properties. *expand on this*
+
+Once everything is correctly nested, the list is dumped into JSON format into ```model_config_tree.json```, where it will be used by the FEAGI Configurator on Godot.
 
 ### Experience Along the Way
 
@@ -53,7 +59,5 @@ Through our development, we had a slowly growing 'graveyard' of unused functions
 ### Results
 
 ![]([my_video.mov](https://github.com/user-attachments/assets/84ca97de-28ea-42e7-8a13-81ceefdc3733))
-
-
 
 *say we completed task, attach video demonstration to show impact of work*
