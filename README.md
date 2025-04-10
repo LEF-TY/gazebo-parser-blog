@@ -58,6 +58,6 @@ Through our development, we had a slowly growing 'graveyard' of unused functions
 
 ### Results
 
-![]([my_video.mov](https://github.com/user-attachments/assets/84ca97de-28ea-42e7-8a13-81ceefdc3733))
+https://github.com/user-attachments/assets/8df4e746-3036-4b9f-bf46-e7ed0563682b
 
 *say we completed task, attach video demonstration to show impact of work*
