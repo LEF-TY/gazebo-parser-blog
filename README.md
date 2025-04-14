@@ -64,6 +64,10 @@ We were successfully able to construct the parsing program and convert Gazebo SD
 
 https://github.com/user-attachments/assets/8df4e746-3036-4b9f-bf46-e7ed0563682b
 
+Here's another example of our work in action - a robot that we parsed is now able to seamlessly be controlled through FEAGI's brain visualizer in Gazebo.
+
+https://github.com/user-attachments/assets/f24cf90e-7a62-4779-9d0d-5930642299a0
+
 Our work simplified the process of turning simple robotic models into AI-controlled machines using FEAGI. The parser makes this process incredibly simple and efficient, enabling greater accessibility to users of differing skill levels and purpose. 
 
 *WIP - add final notes, maybe another video of robot*
