@@ -8,7 +8,7 @@ During this semester, our team has worked on enabling FEAGI's artificial general
 
 The following diagram demonstrates the desired functionality between Gazebo and FEAGI for successful robot control. This semester, our team focused on the sections in green to develop.
 
-![image](https://github.com/user-attachments/assets/c0d6de78-a5a5-40cd-9d3d-7e7846c37ad5)
+![Visualization of how Gazebo and FEAGI can work together, with a focus on the parsing of Gazebo SDF files](https://github.com/user-attachments/assets/c0d6de78-a5a5-40cd-9d3d-7e7846c37ad5)
 
 Our team was responsible for creating a parsing program that converts Gazebo SDF files into readable JSON output to be used by the FEAGI Configurator, which will then generate necessary data for the Gazebo Controller. Gazebo allows for the use of many different inputs/sensors and outputs/actuators in their simulations, and all simulation data is stored in SDF files. The formatting of the data in these SDF files are not uniform, as projects will have different goals and types of robots. In order for the FEAGI Configurator to understand any given simulation, it needs to be fed a standardized JSON format. We successfully created a parser that adapts to simulations of all kinds and produces a proper JSON configuration tree that the Configurator can use to produce a JSON listing capabilities for the Gazebo Controller.
 
@@ -23,10 +23,10 @@ The first milestone that the team was given was to familiarize ourselves with th
 We have found the three main necessary categories for parsing: sensors, actuators, or links.
 
 Sensors take in data from the environment around them and their interactions (input).
-![image](https://github.com/user-attachments/assets/2e4523e6-c742-4e5c-850b-c202400a37b8)
+![Chart of sensors/input used by FEAGI](https://github.com/user-attachments/assets/2e4523e6-c742-4e5c-850b-c202400a37b8)
 
 Actuators use the input from the sensor or user (in this case, FEAGI) to complete actions (output).
-![image](https://github.com/user-attachments/assets/daafbd05-373c-47ca-a84c-fdf6f48f0621)
+![Chart of actuators/output used by FEAGI](https://github.com/user-attachments/assets/daafbd05-373c-47ca-a84c-fdf6f48f0621)
 
 Finally, links are the general structure of the machine that demonstrate how the whole robot is held together. 
 
@@ -38,7 +38,7 @@ Knowing this, we can set the goal to parse the SDF file to find all these essent
 
 The next milestone given to the team was to create the configuration parser. In order to complete this milestone, the team needed to first create a list of mappings from xml elements to FEAGI devices, and parse through the SDF file to find data relating to each element. After a mapping was created and the program was able to find the needed elements, the team was tasked with properly nesting the elements in the JSON configuration file to allow for better funcitonality within the FEAGI controller. This process is demonstrated in the diagram below.
 
-![image](https://github.com/user-attachments/assets/c3c6893e-59ff-46e2-857c-0b3a2dccd343)
+![Flowchart demonstrating the parsing process and how it will be used](https://github.com/user-attachments/assets/c3c6893e-59ff-46e2-857c-0b3a2dccd343)
 
 The first step of the program is to convert the SDF file into an XML Element Tree. Due to compatibility issues, we ended up using the LXML package to do this. This step is done so that we can more easily analyze and parse the incoming file. Once we have the XML ETree, our programs begins the parsing process by scanning the entire XML ETree, finding and storing all elements included in the 'allow list' of the ```gazebo_config_template.json``` file.
 
@@ -62,11 +62,11 @@ Through our development, we had a slowly growing 'graveyard' of unused functions
 
 We were successfully able to construct the parsing program and convert Gazebo SDF files into a standard JSON-formatted model configuration tree. This is passed to the FEAGI Configurator on Godot, where it generates a JSON listing the capabilities of the robot. FEAGI then uses this file with Gazebo in the FEAGI Controller, where it is able to successfully control the robots and receive the proper input. Shown below is a short video of one robot that we had successfully parsed using its camera sensor.
 
-https://github.com/user-attachments/assets/8df4e746-3036-4b9f-bf46-e7ed0563682b
+![Robot successfully using camera sensor](https://github.com/user-attachments/assets/8df4e746-3036-4b9f-bf46-e7ed0563682b)
 
 Here's another example of our work in action - a robot that we parsed is now able to seamlessly be controlled through FEAGI's brain visualizer in Gazebo.
 
-https://github.com/user-attachments/assets/f24cf90e-7a62-4779-9d0d-5930642299a0
+![Robot successfully being controlled through FEAGI's brain visualizer](https://github.com/user-attachments/assets/f24cf90e-7a62-4779-9d0d-5930642299a0)
 
 Our work simplified the process of turning simple robotic models into AI-controlled machines using FEAGI. The parser makes this process incredibly simple and efficient, enabling greater accessibility to users of differing skill levels and purpose. 
 
