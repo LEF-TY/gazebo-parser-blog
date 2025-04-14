@@ -28,7 +28,9 @@ Sensors take in data from the environment around them and their interactions (in
 Actuators use the input from the sensor or user (in this case, FEAGI) to complete actions (output).
 ![image](https://github.com/user-attachments/assets/daafbd05-373c-47ca-a84c-fdf6f48f0621)
 
-Links are the general structure of the machine that demonstrate how the whole robot is held together. It is incredibly important to be able to distinguish between all of these different parts of a robot. In order for FEAGI to correctly control the robot, it needs to know exactly what its capabilities are. Even if some sensors or actuators seem similar, they serve different purposes and have different data properties, meaning they cannot be incorrectly labeled for FEAGI to control.
+Finally, links are the general structure of the machine that demonstrate how the whole robot is held together. 
+
+It is incredibly important to be able to distinguish between all of these different parts of a robot. In order for FEAGI to correctly control the robot, it needs to know exactly what its capabilities are. Even if some sensors or actuators seem similar, they serve different purposes and have different data properties, meaning they cannot be incorrectly labeled for FEAGI to control.
 
 Knowing this, we can set the goal to parse the SDF file to find all these essential robotics parts, correctly categorize them, fill in proper data to FEAGI specs, and correctly restructure new data. This will allow FEAGI to successfully take control of robotics simulations.
 
