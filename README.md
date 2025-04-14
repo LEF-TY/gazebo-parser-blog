@@ -70,4 +70,4 @@ https://github.com/user-attachments/assets/f24cf90e-7a62-4779-9d0d-5930642299a0
 
 Our work simplified the process of turning simple robotic models into AI-controlled machines using FEAGI. The parser makes this process incredibly simple and efficient, enabling greater accessibility to users of differing skill levels and purpose. 
 
-*WIP - add final notes, maybe another video of robot*
+Our team had an amazing time working on this project for Neuraville, gaining invaluable experience in the industry, and we are eager to see how the parser continues to develop and what it allows people to accomplish!
